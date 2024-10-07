@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "./Root";
 import Home from "../home/Home";
 import Header from "../header/Header";
+import Navbar from "../Navbar/Navbar";
 
 const router = createBrowserRouter([
     {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
         {
             path: "/header",
             element: <Header></Header>,
+        },
+        {
+            path: "/navbar",
+            element: <Navbar></Navbar>,
         },
         
       ]
