@@ -11,7 +11,7 @@ const Hero_middle = () => {
     },[])
 
     return (
-        <div>
+        <div className='m-3'>
             {middleData.map(middle => <Hero_middle_details middle={middle}></Hero_middle_details> )}
         </div>
     );
