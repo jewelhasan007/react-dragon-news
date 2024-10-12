@@ -3,6 +3,7 @@ import Root from "./Root";
 import Home from "../home/Home";
 import Header from "../header/Header";
 import Navbar from "../Navbar/Navbar";
+import Hero_middle_details_show from "../hero/Hero_middle_details_show";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
         {
             path: "/navbar",
             element: <Navbar></Navbar>,
+        },
+        {
+            path: "/show-more",
+            element: <Hero_middle_details_show></Hero_middle_details_show>,
         },
         
       ]

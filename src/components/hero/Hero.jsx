@@ -3,11 +3,11 @@ import { CiCalendarDate } from "react-icons/ci";
 import Categories from './Categories';
 import moment from 'moment';
 import Hero_middle from './Hero_middle';
-
-
+import Hero_right from './Hero_right';
 
 const Hero = () => {
-    return (
+    
+return (
         <div className='grid grid-cols-4'>
             <div ><h1 className='font-bold mx-3'>All Catagory</h1>
             <Categories></Categories>
@@ -40,7 +40,9 @@ const Hero = () => {
             <Hero_middle></Hero_middle>
             </div>
             
-            <div><h1 className='font-bold mx-3'>Login With</h1></div>
+            <div>
+            <Hero_right></Hero_right>
+            </div>
         </div>
     );
 };
