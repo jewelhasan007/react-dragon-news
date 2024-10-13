@@ -1,16 +1,16 @@
 import { useContext } from "react";
 import Navbar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
-import ContextAPI from "../contextAPI/ContextAPI";
+import {authContext} from "../contextAPI/ContextAPI";
 
 const LogIn = () => {
-  const logInfo = useContext(contextAPI)
+  const logInfo = useContext(authContext)
     const {logIn} = logInfo
 
     const handleLog = e =>{
       const email = e.target.email.value;
       const password = e.target.password.value;
-
+      console.log(email, password)
       logIn(email, password)
       .then(result => {
         console.log(result.user)
