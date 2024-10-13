@@ -23,7 +23,7 @@ const router = createBrowserRouter([
             element: <Navbar></Navbar>,
         },
         {
-            path: "/show-more",
+            path: "/news/:id",
             element: <Hero_middle_details_show></Hero_middle_details_show>,
         },
         

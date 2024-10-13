@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Hero_middle_details = ({middle}) => {
-    const {author, name,  title, thumbnail_url, details } = middle;
+    const {author, name,  title, thumbnail_url, details, _id } = middle;
     return (
         <div className='border rounded-[15px] m-0 p-0 mb-4'>
             <div className='flex bg-slate-300 rounded-t-[15px]'>
@@ -18,7 +18,7 @@ const Hero_middle_details = ({middle}) => {
             </div>
             <div>
                 {
-                details.length>200 ? <p>{details.slice(0,200)} <Link to='/show-more' className='text-blue-500 font-bold mx-3'>Show more...</Link></p>
+                details.length>200 ? <p>{details.slice(0,200)} <Link to={`/news/${_id}`} className='text-blue-500 font-bold mx-3'>Show more...</Link></p>
                 :
                 <p>{details}</p>
                 }
