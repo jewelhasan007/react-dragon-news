@@ -1,10 +1,14 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 export const authContext = createContext(null);
 
 
 const ContextAPI = ({children}) => {
-const authInfo = {name: 'karim'}
+const [user, setUser] = useState([null])
+
+const authInfo = {
+    user,
+}
    
 
     return (
