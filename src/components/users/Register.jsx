@@ -21,7 +21,7 @@ const Register = () => {
       console.log(result.user)
     })
     .catch(error=>{console.log(error.message)})
-
+    e.target.reset();
   }
     return (
         <div>
