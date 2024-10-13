@@ -1,6 +1,18 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { authContext } from "../contextAPI/ContextAPI";
 
 const Register = () => {
+  const createUser = useContext(authContext)
+  
+
+  const handleRegister = e =>{
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(name, email, password)
+  }
     return (
         <div>
         <div className="hero bg-base-200 min-h-screen">
@@ -10,7 +22,7 @@ const Register = () => {
  
 </div>
 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-  <form className="card-body">
+  <form className="card-body" onSubmit={handleRegister}>
     <div className="form-control">
       <label className="label">
         <span className="label-text">Name</span>
