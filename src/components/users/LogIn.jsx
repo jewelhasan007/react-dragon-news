@@ -1,7 +1,9 @@
+import Navbar from "../Navbar/Navbar";
 
 const LogIn = () => {
     return (
         <div>
+          <Navbar></Navbar>
             <div className="hero bg-base-200 min-h-screen">
   <div className="hero-content flex-col ">
     <div className="text-center lg:text-left">

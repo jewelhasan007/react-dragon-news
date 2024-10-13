@@ -6,6 +6,10 @@ export const authContext = createContext(null);
 const ContextAPI = ({children}) => {
 const [user, setUser] = useState([null])
 
+const createUser = (email, password) =>{
+    return 
+}
+
 const authInfo = {
     user,
 }
