@@ -1,4 +1,5 @@
 import Navbar from "../Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 const LogIn = () => {
     return (
@@ -31,6 +32,7 @@ const LogIn = () => {
           <button className="btn btn-primary">Login</button>
         </div>
       </form>
+      <p className="m-4">If you are new in Here? Please <Link to='/register' className="font-bold text-green-600 underline">Register Here</Link></p>
     </div>
   </div>
 </div>

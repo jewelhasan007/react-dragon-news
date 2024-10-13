@@ -5,6 +5,7 @@ import Header from "../header/Header";
 import Navbar from "../Navbar/Navbar";
 import Hero_middle_details_show from "../hero/Hero_middle_details_show";
 import LogIn from "../users/LogIn";
+import Register from "../users/Register";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
         {
             path: "/login",
             element: <LogIn></LogIn>,
+        },
+        
+        {
+            path: "/register",
+            element: <Register></Register>,
         },
         
       ]

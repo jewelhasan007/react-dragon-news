@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from "react-router-dom";
 
 const Register = () => {
     return (
@@ -13,15 +13,21 @@ const Register = () => {
   <form className="card-body">
     <div className="form-control">
       <label className="label">
+        <span className="label-text">Name</span>
+      </label>
+      <input type="text" name="name" placeholder="name" className="input input-bordered" required />
+    </div>
+    <div className="form-control">
+      <label className="label">
         <span className="label-text">Email</span>
       </label>
-      <input type="email" placeholder="email" className="input input-bordered" required />
+      <input type="email" name="email" placeholder="email" className="input input-bordered" required />
     </div>
     <div className="form-control">
       <label className="label">
         <span className="label-text">Password</span>
       </label>
-      <input type="password" placeholder="password" className="input input-bordered" required />
+      <input type="password" name="password" placeholder="password" className="input input-bordered" required />
       <label className="label">
         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
       </label>
@@ -30,6 +36,7 @@ const Register = () => {
       <button className="btn btn-primary">Submit</button>
     </div>
   </form>
+<p className="m-4">If you have an account? <Link to='/login' className="font-bold text-blue-600 underline">Login Please</Link></p>
 </div>
 </div>
 </div>
