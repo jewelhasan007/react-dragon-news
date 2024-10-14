@@ -5,20 +5,24 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndP
 export const authContext = createContext(null);
 
 const ContextAPI = ({children}) => {
-const [user, setUser] = useState([null])
+const [user, setUser] = useState(null)
+const [loading, setLoading] = useState(true)
 
 const createUser = (email, password) =>{
+    setLoading(true)
     return createUserWithEmailAndPassword(auth, email, password);
 }
 
 const logIn = (email, password) => {
+    setLoading(true)
     return signInWithEmailAndPassword(auth, email, password);
 }
 
 useEffect(()=>{
     const unSubscribe = onAuthStateChanged(auth, currentUser=>{
         console.log('login user', currentUser);
-    setUser(currentUser);
+        setUser(currentUser);
+        setLoading(false)
     });
     return ()=> {
         unSubscribe()
@@ -26,6 +30,7 @@ useEffect(()=>{
 },[])
 
 const logOut = () => {
+    setLoading(true)
     return signOut(auth);
 }
 

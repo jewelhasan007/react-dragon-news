@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../navbar/Navbar";
 import { Link } from "react-router-dom";
 import {authContext} from "../contextAPI/ContextAPI";
 
@@ -12,11 +12,11 @@ const LogIn = () => {
       console.log('login', email, password)
 
       // signIn from firebase
-      logIn(email, password)
-      .then(result => {
-        console.log(result.user)
-      })
-      .catch(error => {console.log(error.message)})
+      // logIn(email, password)
+      // .then(result => {
+      //   console.log(result.user)
+      // })
+      // .catch(error => {console.log(error.message)})
     }
    
     return (
