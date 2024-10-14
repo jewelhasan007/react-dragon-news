@@ -3,11 +3,8 @@ import { Link } from "react-router-dom";
 import { authContext } from "../contextAPI/ContextAPI";
 
 const Register = () => {
-  const regUser = useContext(authContext)
-
-  const {createUser} = regUser
+  const {createUser} = useContext(authContext)
   
-
   const handleRegister = e =>{
     e.preventDefault();
     const name = e.target.name.value;
@@ -58,7 +55,7 @@ const Register = () => {
       <button className="btn btn-primary">Submit</button>
     </div>
   </form>
-<p className="m-4">If you have an account? <Link to='/login' className="font-bold text-blue-600 underline">Login Please</Link></p>
+  <p className="m-4">If you have an account? <Link to='/login' className="font-bold text-blue-600 underline">Login Please</Link></p>
 </div>
 </div>
 </div>

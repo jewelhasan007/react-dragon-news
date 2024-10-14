@@ -4,20 +4,21 @@ import { Link } from "react-router-dom";
 import {authContext} from "../contextAPI/ContextAPI";
 
 const LogIn = () => {
-  const logInfo = useContext(authContext)
-    const {logIn} = logInfo
-
+  const {logIn} = useContext(authContext)
+  
     const handleLog = e =>{
       const email = e.target.email.value;
       const password = e.target.password.value;
       console.log(email, password)
+
+      // signIn from firebase
       logIn(email, password)
       .then(result => {
         console.log(result.user)
       })
       .catch(error => {console.log(error.message)})
     }
-    
+   
     return (
         <div>
           <Navbar></Navbar>

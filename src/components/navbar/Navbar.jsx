@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import { authContext } from '../contextAPI/ContextAPI';
 
 const Navbar = () => {
-    const link = [ <li className='mx-3'><Link to="/">Home</Link></li>,
-        <li className='mx-3'><Link to="/about">About</Link></li>,
-        <li className='mx-3'><Link to="/career">Career</Link></li>, ]
-      
+  const {user, logOut} = useContext(authContext)
+    const link = [<li className='mx-3'><Link to="/">Home</Link></li>,
+                  <li className='mx-3'><Link to="/about">About</Link></li>,
+                  <li className='mx-3'><Link to="/career">Career</Link></li>, ]
+  
+const handleLogOut = () => {
+   // LogOut from firebase
+   logOut()
+   .then()
+   .catch()
+}
+
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -47,7 +56,12 @@ const Navbar = () => {
             src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
         </div>
       </div>
-   <Link to={'/login'}> <button className='btn btn-sm border-black'>Login</button> </Link>
+      {
+        user ?  <Link> <button className='btn btn-sm border-black' onClick={handleLogOut}>Log Out</button> </Link>
+        :
+         <Link to={'/login'}> <button className='btn btn-sm border-black'>Login</button> </Link>
+      }
+  
   </div>
 </div>
         </div>
