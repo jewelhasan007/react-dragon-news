@@ -11,8 +11,8 @@ const Navbar = () => {
 const handleLogOut = () => {
    // LogOut from firebase
    logOut()
-   .then()
-   .catch()
+      .then()
+      .catch()
 }
 
     return (
@@ -57,7 +57,7 @@ const handleLogOut = () => {
         </div>
       </div>
       {
-        user ?  <Link> <button className='btn btn-sm border-black' onClick={handleLogOut}>Log Out</button> </Link>
+        user ?  <button className='btn btn-sm border-black' onClick={handleLogOut}>Log Out</button>
         :
          <Link to={'/login'}> <button className='btn btn-sm border-black'>Login</button> </Link>
       }

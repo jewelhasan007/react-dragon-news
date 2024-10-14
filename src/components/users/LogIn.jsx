@@ -9,7 +9,7 @@ const LogIn = () => {
     const handleLog = e =>{
       const email = e.target.email.value;
       const password = e.target.password.value;
-      console.log(email, password)
+      console.log('login', email, password)
 
       // signIn from firebase
       logIn(email, password)

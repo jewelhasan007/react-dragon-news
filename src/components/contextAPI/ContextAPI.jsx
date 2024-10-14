@@ -17,9 +17,12 @@ const logIn = (email, password) => {
 
 useEffect(()=>{
     const unSubscribe = onAuthStateChanged(auth, currentUser=>{
+        console.log('login user', currentUser);
     setUser(currentUser);
-    })
-    return unSubscribe();
+    });
+    return ()=> {
+        unSubscribe()
+    }
 },[])
 
 const logOut = () => {
