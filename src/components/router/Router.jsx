@@ -6,6 +6,8 @@ import Navbar from "../Navbar/Navbar";
 import Hero_middle_details_show from "../hero/Hero_middle_details_show";
 import LogIn from "../users/LogIn";
 import Register from "../users/Register";
+import PrivateRoute from "../private-route/PrivateRoute";
+import Profile from "../private-route/Profile";
 
 const router = createBrowserRouter([
     {
@@ -26,7 +28,7 @@ const router = createBrowserRouter([
         },
         {
             path: "/news/:id",
-            element: <Hero_middle_details_show></Hero_middle_details_show>,
+            element: <PrivateRoute><Hero_middle_details_show></Hero_middle_details_show></PrivateRoute>,
         },
         {
             path: "/login",
@@ -37,6 +39,7 @@ const router = createBrowserRouter([
             path: "/register",
             element: <Register></Register>,
         },
+       
         
       ]
     },

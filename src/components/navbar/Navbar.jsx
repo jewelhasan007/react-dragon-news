@@ -7,7 +7,9 @@ const Navbar = () => {
 
     const link = [<li className='mx-3'><Link to="/">Home</Link></li>,
                   <li className='mx-3'><Link to="/about">About</Link></li>,
-                  <li className='mx-3'><Link to="/career">Career</Link></li>, ]
+                  <li className='mx-3'><Link to="/career">Career</Link></li>, 
+                ]
+
   
 const handleLogOut = () => {
    // LogOut from firebase
@@ -39,27 +41,29 @@ const handleLogOut = () => {
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
        {link}
+       {user && user ? <li className='mx-3'><Link to="/profile">Profile</Link></li> : '' }
       </ul>
     </div>
-   
+
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
     {link}
+    {user && user ? <li className='mx-3'><Link to="/profile">Profile</Link></li> : '' }
     </ul>
   </div>
  
   <div className="navbar-end">
-  <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-        
-      </div>
+
       {
         user ?  
-        <div className="w-10 rounded-full">
+        <div className="w-10 rounded-full flex justify-end items-center">
           <img
+            className='rounded-box z-[1]'
             alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-            <button className='btn btn-sm border-black' onClick={handleLogOut}>Log Out</button>
+            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"/>
+            {user.email}
+            <button className='btn btn-sm border-black m-2' onClick={handleLogOut}>Log Out</button>
         </div>
         
         :
