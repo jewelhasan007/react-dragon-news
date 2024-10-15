@@ -4,6 +4,7 @@ import { authContext } from '../contextAPI/ContextAPI';
 
 const Navbar = () => {
   const {user, logOut} = useContext(authContext)
+
     const link = [<li className='mx-3'><Link to="/">Home</Link></li>,
                   <li className='mx-3'><Link to="/about">About</Link></li>,
                   <li className='mx-3'><Link to="/career">Career</Link></li>, ]

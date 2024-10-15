@@ -18,27 +18,27 @@ const logIn = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
 }
 
-useEffect(()=>{
-    const unSubscribe = onAuthStateChanged(auth, currentUser=>{
-        console.log('login user', currentUser);
-        setUser(currentUser);
-        setLoading(false)
-    });
-    return ()=> {
-        unSubscribe()
-    }
-},[])
-
 const logOut = () => {
     setLoading(true)
     return signOut(auth);
 }
 
+useEffect(()=>{
+    const unsubscribe = onAuthStateChanged(auth, currentUser=>{
+        setUser(currentUser);
+        setLoading(false);
+         });
+    return ()=> {
+        unsubscribe();
+    }
+},[])
+
 const authInfo = {
     user,
     createUser,
     logIn,
-    logOut
+    logOut,
+    loading
 }
    
 return (

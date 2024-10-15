@@ -1,22 +1,25 @@
 import { useContext } from "react";
-import Navbar from "../navbar/Navbar";
-import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
+import { Link, useNavigate } from "react-router-dom";
 import {authContext} from "../contextAPI/ContextAPI";
 
 const LogIn = () => {
   const {logIn} = useContext(authContext)
+  const navigate = useNavigate()
   
     const handleLog = e =>{
+      e.preventDefault();
       const email = e.target.email.value;
       const password = e.target.password.value;
       console.log('login', email, password)
 
       // signIn from firebase
-      // logIn(email, password)
-      // .then(result => {
-      //   console.log(result.user)
-      // })
-      // .catch(error => {console.log(error.message)})
+      logIn(email, password)
+      .then(result => {
+        e.target.reset();
+        navigate('/')
+      })
+      .catch(error => {console.log(error.message)})
     }
    
     return (
