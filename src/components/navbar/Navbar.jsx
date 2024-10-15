@@ -9,8 +9,6 @@ const Navbar = () => {
                   <li className='mx-3'><Link to="/about">About</Link></li>,
                   <li className='mx-3'><Link to="/career">Career</Link></li>, 
                 ]
-
-  
 const handleLogOut = () => {
    // LogOut from firebase
    logOut()
