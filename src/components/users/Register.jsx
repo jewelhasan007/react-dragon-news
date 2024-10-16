@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../contextAPI/ContextAPI";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const {createUser} = useContext(authContext)
@@ -17,11 +18,17 @@ const Register = () => {
     createUser(email, password)
     .then(result =>{
       console.log(result.user)
+      updateProfile(result.user, {
+      displayName: name
+      })
+      .then()
+      .catch(error=> console.log(error.message))
+      
       e.target.reset();
       navigate('/')
     })
     .catch(error=>{console.log(error.message)})
-   
+    
   }
     return (
         <div>
