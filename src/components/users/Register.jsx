@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../contextAPI/ContextAPI";
 import { sendEmailVerification, updateProfile } from "firebase/auth";
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
   const {createUser} = useContext(authContext)
@@ -78,7 +79,7 @@ const Register = () => {
       </label>
     </div>
     <div className="form-control mt-6">
-      <button  className="btn btn-primary">Submit</button>
+      <button onClick={toastSuccessful}  className="btn btn-primary">Submit</button>
    
 
     </div>
