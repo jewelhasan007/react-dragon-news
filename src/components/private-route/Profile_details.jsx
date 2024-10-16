@@ -1,5 +1,5 @@
 import Navbar from "../Navbar/Navbar";
-
+import { ToastContainer, toast } from 'react-toastify';
 
 const Profile_details = ({ user}) => {
     const name = user.displayName;
@@ -7,6 +7,12 @@ const Profile_details = ({ user}) => {
     const phone = user.phoneNumber
     const photo = user.photoURL
     console.log(user)
+
+    
+    const toastSuccessful = () =>{
+        toast("Succesfully submitted the Registration");
+      }
+    
     return (
         <div >
             <Navbar></Navbar>
@@ -14,7 +20,8 @@ const Profile_details = ({ user}) => {
           <p><span className="font-bold">Email id:</span> {email}</p>
           <p><span className="font-bold">Phone:</span> {phone ? phone : 'Phone number not found'}</p>
           <p><span className="font-bold">Phone:</span> {photo ? photo : 'Photo not found'}</p>
-
+          <button onClick={toastSuccessful}>Toast Button</button>
+          <ToastContainer />
         </div>
     );
 };
