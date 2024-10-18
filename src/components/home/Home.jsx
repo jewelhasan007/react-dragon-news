@@ -9,8 +9,8 @@ const Home = () => {
       
       <div>
         <div className="flex">
-      <button className="btn btn-error">Latest</button>
-       <Marquee className="mx-3">
+      <button className="btn btn-error">Latest News</button>
+       <Marquee className="mx-3"pauseOnHover={1} gradient={1} gradientColor="aqua"  >
        <p className="mx-3"> I can be a React component, multiple React components, or just some text.</p>
        <p className="mx-3"> I can be a React component, multiple React components, or just some text.</p>
        <p className="mx-3"> I can be a React component, multiple React components, or just some text.</p>

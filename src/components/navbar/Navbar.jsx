@@ -8,7 +8,8 @@ const Navbar = () => {
     const link = [<li className='mx-3'><Link to="/">Home</Link></li>,
                   <li className='mx-3'><Link to="/about">About</Link></li>,
                   <li className='mx-3'><Link to="/career">Career</Link></li>, 
-                  <li className='mx-3'><Link to="/career">Contact Us</Link></li>, 
+                  <li className='mx-3'><Link to="/career">Latest News</Link></li>, 
+                  <li className='mx-3'><Link to="/career">Breaking News</Link></li>, 
                 ]
 const handleLogOut = () => {
    // LogOut from firebase
@@ -19,7 +20,7 @@ const handleLogOut = () => {
 
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-green-200">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
