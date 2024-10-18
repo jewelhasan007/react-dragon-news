@@ -8,6 +8,7 @@ const Navbar = () => {
     const link = [<li className='mx-3'><Link to="/">Home</Link></li>,
                   <li className='mx-3'><Link to="/about">About</Link></li>,
                   <li className='mx-3'><Link to="/career">Career</Link></li>, 
+                  <li className='mx-3'><Link to="/career">Contact Us</Link></li>, 
                 ]
 const handleLogOut = () => {
    // LogOut from firebase
