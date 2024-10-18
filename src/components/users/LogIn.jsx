@@ -1,15 +1,12 @@
 import { useContext } from "react";
-import Navbar from "../Navbar/Navbar";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import Navbar from "../navbar/Navbar";
+import { Link } from "react-router-dom";
 import {authContext} from "../contextAPI/ContextAPI";
 
 const LogIn = () => {
   const {logIn} = useContext(authContext)
-  const navigate = useNavigate();
-  const location = useLocation();
   
     const handleLog = e =>{
-      e.preventDefault();
       const email = e.target.email.value;
       const password = e.target.password.value;
       console.log('login', email, password)
@@ -17,8 +14,6 @@ const LogIn = () => {
       // signIn from firebase
       logIn(email, password)
       .then(result => {
-        e.target.reset();
-        navigate(location?.state ? location.state : '/')
         console.log(result.user)
       })
       .catch(error => {console.log(error.message)})

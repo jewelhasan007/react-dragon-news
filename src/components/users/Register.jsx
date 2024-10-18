@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Navbar from "../navbar/Navbar";
 import { authContext } from "../contextAPI/ContextAPI";
 import { sendEmailVerification, updateProfile } from "firebase/auth";
 import { ToastContainer, toast } from 'react-toastify';
@@ -48,7 +49,7 @@ const Register = () => {
   }
     return (
         <div>
-  
+  <Navbar></Navbar>
         <div className="hero bg-base-200 min-h-screen">
 <div className="hero-content flex-col ">
 <div className="text-center lg:text-left">
