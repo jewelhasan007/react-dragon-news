@@ -5,11 +5,11 @@ import { authContext } from '../contextAPI/ContextAPI';
 const Navbar = () => {
   const {user, logOut} = useContext(authContext)
 
-    const link = [<li className='mx-3'><Link to="/">Home</Link></li>,
-                  <li className='mx-3'><Link to="/about">About</Link></li>,
-                  <li className='mx-3'><Link to="/career">Career</Link></li>, 
-                  <li className='mx-3'><Link to="/career">Latest News</Link></li>, 
-                  <li className='mx-3'><Link to="/career">Breaking News</Link></li>, 
+    const link = [<li className='mx-3'><Link to="/">All Lists</Link></li>,
+                  <li className='mx-3'><Link to="/about">Substation</Link></li>,
+                  <li className='mx-3'><Link to="/career">MCC</Link></li>, 
+                  <li className='mx-3'><Link to="/career">Purchase(Pending & issues)</Link></li>, 
+                  <li className='mx-3'><Link to="/career">Email</Link></li>, 
                 ]
 const handleLogOut = () => {
    // LogOut from firebase
