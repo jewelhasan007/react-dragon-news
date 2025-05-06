@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "./Root";
 import Home from "../home/Home";
 import Header from "../header/Header";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../navbar/Navbar";
 import Hero_middle_details_show from "../hero/Hero_middle_details_show";
 import LogIn from "../users/LogIn";
 import Register from "../users/Register";
@@ -43,8 +43,6 @@ const router = createBrowserRouter([
             path: "/profile",
             element: <Profile></Profile>,
         },
-       
-        
       ]
     },
   ]);

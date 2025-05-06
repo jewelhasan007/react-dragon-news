@@ -1,4 +1,4 @@
-import Navbar from "../Navbar/Navbar";
+import Navbar from '../navbar/Navbar';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

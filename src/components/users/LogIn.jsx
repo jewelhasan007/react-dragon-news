@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../navbar/Navbar";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {authContext} from "../contextAPI/ContextAPI";
 
