@@ -2,12 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "./Root";
 import Home from "../home/Home";
 import Header from "../header/Header";
-import Navbar from "../navbar/Navbar";
+
 import Hero_middle_details_show from "../hero/Hero_middle_details_show";
 import LogIn from "../users/LogIn";
 import Register from "../users/Register";
 import PrivateRoute from "../private-route/PrivateRoute";
 import Profile from "../private-route/Profile";
+import Navbar from "../Navbar/Navbar";
 
 const router = createBrowserRouter([
     {
